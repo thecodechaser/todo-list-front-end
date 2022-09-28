@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import { FaRegEdit } from "react-icons/fa";
 import { addTodoApi } from '../../redux/todos/todos';
 
-const Form = () => {
+const Form = (props) => {
   const [task, setTask] = useState('');
   const dispatch = useDispatch();
-
+  const setSuccessMsg = props.setSuccessMsg;
   const addTodo= (e) => {
     e.preventDefault();
     if (task === '') return;
@@ -18,6 +18,10 @@ const Form = () => {
     dispatch(addTodoApi(newTodo));
     setTask('');
 
+    setSuccessMsg(true)
+    setTimeout(() => {
+    setSuccessMsg(false)
+    }, 3000);
   }
 
   return (

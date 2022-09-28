@@ -7,13 +7,23 @@ import { useDispatch } from 'react-redux';
 const Todo = (props) => {
   const dispatch = useDispatch();
   const todo = props.todo;
+  const setDeleteMsg = props.setDeleteMsg;
+  const setUpdateMsg = props.setUpdateMsg;
   const [editTodo, setEditTodo] = useState(todo.task)
   const removeTodo = () => {
     dispatch(removeTodoApi(todo.id));
+    setDeleteMsg(true)
+    setTimeout(() => {
+      setDeleteMsg(false)
+    }, 3000);
   };
 
   const updateTodo = () => {
     dispatch(updateTodoApi(todo.id, editTodo));
+    setUpdateMsg(true)
+    setTimeout(() => {
+      setUpdateMsg(false)
+    }, 3000);
   };
 
   return (

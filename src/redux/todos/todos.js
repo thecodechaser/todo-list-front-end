@@ -59,8 +59,6 @@ const todoReducer = (state = initialState, action) => {
     case ADD_TODO:
       return [...state, action.payload];
     case REMOVE_TODO:
-      console.log(state)
-      console.log(action.payload)
       return state.filter((todo) => todo.id !== action.payload);
     case FETCH_TODO:
       return action.payload;
