@@ -27,11 +27,10 @@ const fetchTodo = (payload) => ({
 
 // api functions
 
-export const addTodoApi = (task) => async (dispatch) => {
-  const newTodo = { task: task, completed: false};
-  await Axios.post(`${BASEURL}`, newTodo);
-  const localTodo = {task: task, completed: false, id: initialState[initialState.length -1].id}
-  dispatch(addBook(localTodo));
+export const addTodoApi = (todo) => async (dispatch) => {
+  await Axios.post(`${BASEURL}`, todo);
+  const localTodo = {task: todo.task, completed: false, id: 100}
+  dispatch(addTodo(localTodo));
 };
 
 export const fetchTodoApi = () => async (dispatch) => {
