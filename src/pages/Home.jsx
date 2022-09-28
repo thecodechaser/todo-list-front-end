@@ -1,7 +1,7 @@
 const Home = () =>{
-  retirn (
+  return (
     <p>Home Page</p>
   )
 }
 
-return Home;
+export default Home;
