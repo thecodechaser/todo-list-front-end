@@ -1,8 +1,8 @@
 /* eslint-disable */
 // actions
-const ADD_TODO = 'todolist/todos/ADD_TODO';
-const REMOVE_TODO = 'todolist/todos/REMOVE_TODO';
-const FETCH_TODO = 'todolist/todos/FETCH_TODO';
+const ADD_TODO = "todolist/todos/ADD_TODO";
+const REMOVE_TODO = "todolist/todos/REMOVE_TODO";
+const FETCH_TODO = "todolist/todos/FETCH_TODO";
 
 // initial-state
 const initialState = [];
