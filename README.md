@@ -6,28 +6,22 @@
 
 ## Link to the backend
 
-[Portfolio Backend](https://github.com/thecodechaser/portfolio-backend)
+[Todo-List Backend](https://github.com/thecodechaser/todo-list-back-end)
 
 ## Preview:
 
 ### Home Page
 
-![screenshot](./src/assets/images/previews/preview1.png)
+![screenshot](./src/assets/home.png)
 
-### Portfolio Page
+### Todo-List Page
 
-![screenshot](./src/assets/images/previews/preview2.png)
-
-### Blogs Page
-
-![screenshot](./src/assets/images/previews/preview3.png)
+![screenshot](./src/assets/todolist.png)
 
 ## Built With
 
 - HTML
 - CSS
-- Framer Animation
-- EmailJS
 - Tailwind
 - JavaScript
 - REACT
@@ -37,7 +31,7 @@
 
 ## Live version
 
-[Portfolio](https://thecodechaser.com/)
+#### Coming soon!
 
 ## Getting Started
 
@@ -57,9 +51,9 @@ To get a local copy up and running follow these simple example steps.
 - Clone the project
 
 ```bash 
-git clone git@github.com:thecodechaser/portfolio-frontend.git
+git clone git@github.com:thecodechaser/todo-list-front-end.git
 
-cd portfolio-frontend
+cd todo-list-front-end
 ```
 
 - Install dependencies
@@ -82,11 +76,11 @@ npm run test
 
 ## Visit And Open Files
 
-[Visit Repo](https://github.com/thecodechaser/portfolio-frontend)
+[Visit Repo](https://github.com/thecodechaser/todo-list-front-end)
 
 ## Download Repo
 
-[Download Repo](https://github.com/thecodechaser/portfolio-frontend/archive/refs/heads/dev.zip)
+[Download Repo](https://github.com/thecodechaser/todo-list-front-end/archive/refs/heads/dev.zip)
 
 ## Authors
 
@@ -100,7 +94,7 @@ npm run test
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/thecodechaser/portfolio-frontend/issues).
+Feel free to check the [issues page](https://github.com/thecodechaser/todo-list-front-end/issues).
 
 ## Show your support
 
@@ -108,7 +102,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Inspiration: Microverse
+- Inspiration: [CogniTensor](https://www.congnitensor.com)
 
 ## 📝 License
 
