@@ -33,7 +33,7 @@ const Form = (props) => {
         placeholder="Task name..."
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        maxLength="20"
+        maxLength="30"
       />
       <button
         className="ml-8 lg:ml-2 text-primaryColor font-semibold"
