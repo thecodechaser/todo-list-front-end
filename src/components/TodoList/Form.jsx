@@ -5,7 +5,7 @@ const Form = () => {
     <div className="mb-5">
       <input
         required
-        className="w-64 lg:w-80 border-2 rounded border-primaryColor focus:outline-none"
+        className="w-64 lg:w-80 py-1 px-2 border-2 rounded border-primaryColor focus:outline-none"
         type="text"
         placeholder="Task name..."
         // value={title}
