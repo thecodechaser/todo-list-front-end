@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { FaRegEdit } from "react-icons/fa";
-import { addTodoApi } from '../../redux/todos/todos';
+import { addTodoApi } from "../../redux/todos/todos";
 
 const Form = (props) => {
-  const [task, setTask] = useState('');
+  const [task, setTask] = useState("");
   const dispatch = useDispatch();
   const setSuccessMsg = props.setSuccessMsg;
-  const addTodo= (e) => {
+  const addTodo = (e) => {
     e.preventDefault();
-    if (task === '') return;
+    if (task === "") return;
     const newTodo = {
       task,
-      completed: false
+      completed: false,
     };
 
     dispatch(addTodoApi(newTodo));
-    setTask('');
+    setTask("");
 
-    setSuccessMsg(true)
+    setSuccessMsg(true);
     setTimeout(() => {
-    setSuccessMsg(false)
+      setSuccessMsg(false);
     }, 3000);
-  }
+  };
 
   return (
     <div className="mb-5">
@@ -37,7 +37,8 @@ const Form = (props) => {
       />
       <button
         className="ml-8 lg:ml-2 text-primaryColor font-semibold"
-        type="submit" onClick={addTodo}
+        type="submit"
+        onClick={addTodo}
       >
         Add Task
         <FaRegEdit className="cursor-pointer inline ml-2 mb-1" />

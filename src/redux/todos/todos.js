@@ -1,7 +1,7 @@
-import Axios from 'axios';
+import Axios from "axios";
 
 // const
-const BASEURL ="http://localhost:8080/api/todos"
+const BASEURL = "http://localhost:8080/api/todos";
 const ADD_TODO = "todolist/todos/ADD_TODO";
 const REMOVE_TODO = "todolist/todos/REMOVE_TODO";
 const FETCH_TODO = "todolist/todos/FETCH_TODO";
@@ -35,7 +35,7 @@ const updateTodo = (payload) => ({
 
 export const addTodoApi = (todo) => async (dispatch) => {
   await Axios.post(`${BASEURL}`, todo);
-  const localTodo = {task: todo.task, completed: false, id: 100}
+  const localTodo = { task: todo.task, completed: false, id: 100 };
   dispatch(addTodo(localTodo));
 };
 
@@ -50,7 +50,7 @@ export const removeTodoApi = (id) => async (dispatch) => {
 };
 
 export const updateTodoApi = (id, editTodo) => async (dispatch) => {
-  await Axios.put(`${BASEURL}/${id}`, {task: editTodo});
+  await Axios.put(`${BASEURL}/${id}`, { task: editTodo });
 };
 
 // recucer
