@@ -1,7 +1,12 @@
+// actions
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const FETCH_BOOK = 'bookStore/books/FETCH_BOOK';
+
 // initial-state
 const initialState = [];
 
-const reducer = (state = initialState, action) => {
+const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
@@ -13,3 +18,5 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default todoReducer;
