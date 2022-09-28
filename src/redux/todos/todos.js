@@ -1,4 +1,5 @@
-/* eslint-disable */
+import Axios from 'axios';
+
 // const
 const BASEURL ="http://localhost:8080/api/todos"
 const ADD_TODO = "todolist/todos/ADD_TODO";
@@ -27,8 +28,7 @@ const fetchTodo = (payload) => ({
 // api functions
 export const fetchTodoApi = () => async (dispatch) => {
   const todos = await Axios.get(`${BASEURL}`);
-  console.log(todos)
-  // dispatch(fetchTodo(mapBooks));
+  dispatch(fetchTodo(todos.data));
 };
 
 
