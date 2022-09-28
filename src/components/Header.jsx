@@ -8,8 +8,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-between px-20 py-5 shadow-xl w-full">
-      <img className="w-56" src={logo} />
+    <header className="flex justify-between px-6 md:px-20 py-5 shadow-xl w-full">
+      <img className="w-32 md:w-56" src={logo} />
       <nav>
         <ul className="flex gap-2">
           {menu.map((item) => (

@@ -1,6 +1,9 @@
+import { FaRegTrashAlt } from "react-icons/fa";
+
 const Todo = () => {
   return (
-    <p>This is a todo task gffffffffffffffuys</p>
+    <p className="text-primaryColor">Thsssssssssssis is a todo task gffffffffffffffuys 
+    < FaRegTrashAlt className="cursor-pointer inline ml-6 lg:ml-20"/></p>
   )
 };
 
