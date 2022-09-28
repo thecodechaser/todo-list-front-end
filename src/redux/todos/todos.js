@@ -1,3 +1,4 @@
+/* eslint-disable */
 // actions
 const ADD_TODO = 'todolist/todos/ADD_TODO';
 const REMOVE_TODO = 'todolist/todos/REMOVE_TODO';
