@@ -11,10 +11,13 @@ const Todo = (props) => {
     dispatch(removeTodoApi(todo.id));
   };
   return (
-    <input className="text-primaryColor focus:outline-primaryColor py-1 px-2"
+    <div className="flex">
+    <input className="text-primaryColor w-64 lg:w-80 focus:outline-primaryColor py-1 px-2"
      value={editTodo}
      onChange={(e) => setEditTodo(e.target.value)}
     />
+    <FaRegTrashAlt onClick={removeTodo} className="text-primaryColor cursor-pointer inline ml-6 lg:ml-20" />
+    </div>
   );
 };
 
