@@ -6,7 +6,6 @@ import { fetchTodoApi } from "../redux/todos/todos";
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todoReducer);
-  console.log(todos)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchTodoApi());
@@ -16,7 +15,7 @@ const TodoList = () => {
       <div className="flex flex-col shadow-md md:w-1/3 shadow-primaryColor p-10 gap-5">
         <Form />
         {todos.map((todo) => (
-          <Todo todo={todo}/>
+          <Todo key={todo.id} todo={todo}/>
         ))}
       </div>
     </div>

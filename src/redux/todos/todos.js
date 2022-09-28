@@ -5,6 +5,7 @@ const BASEURL ="http://localhost:8080/api/todos"
 const ADD_TODO = "todolist/todos/ADD_TODO";
 const REMOVE_TODO = "todolist/todos/REMOVE_TODO";
 const FETCH_TODO = "todolist/todos/FETCH_TODO";
+const UPDATE_TODO = "todolist/todos/UPDATE_TODO";
 
 // initial-state
 const initialState = [];
@@ -22,6 +23,11 @@ const removeTodo = (payload) => ({
 
 const fetchTodo = (payload) => ({
   type: FETCH_TODO,
+  payload,
+});
+
+const updateTodo = (payload) => ({
+  type: UPDATE_TODO,
   payload,
 });
 
@@ -43,12 +49,18 @@ export const removeTodoApi = (id) => async (dispatch) => {
   dispatch(removeTodo(id));
 };
 
+export const updateTodoApi = (id, editTodo) => async (dispatch) => {
+  await Axios.put(`${BASEURL}/${id}`, {task: editTodo});
+};
+
 // recucer
 const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
       return [...state, action.payload];
     case REMOVE_TODO:
+      console.log(state)
+      console.log(action.payload)
       return state.filter((todo) => todo.id !== action.payload);
     case FETCH_TODO:
       return action.payload;
