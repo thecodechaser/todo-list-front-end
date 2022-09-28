@@ -102,7 +102,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Inspiration: [CogniTensor](https://www.congnitensor.com)
+- Inspiration: [CogniTensor](https://www.cognitensor.com)
 
 ## 📝 License
 
