@@ -31,6 +31,10 @@ export const fetchTodoApi = () => async (dispatch) => {
   dispatch(fetchTodo(todos.data));
 };
 
+export const removeBookApi = (id) => async (dispatch) => {
+  await Axios.delete(`${BASEURL}/${id}`);
+  dispatch(removeTodo(id));
+};
 
 // recucer
 const todoReducer = (state = initialState, action) => {
