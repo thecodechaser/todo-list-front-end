@@ -18,6 +18,11 @@ const TodoList = () => {
       <div className="flex justify-center mt-32">
         <div className="flex flex-col shadow-md md:w-1/3 shadow-primaryColor p-10 gap-5">
           <Form setSuccessMsg={setSuccessMsg} />
+          {todos.length == 0 && (
+            <p className="text-center mt-5 text-lg font-semibold text-primaryColor">
+              There's no task, Please add your todo tasks.
+            </p>
+          )}
           {todos.map((todo, index) => (
             <Todo
               setDeleteMsg={setDeleteMsg}

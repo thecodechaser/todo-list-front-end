@@ -38,11 +38,13 @@
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+
 - A text editor(preferably Visual Studio Code)
 - Node
 - Web browser
 
 ### Install
+
 - [Git](https://git-scm.com/downloads)
 - [Node](https://nodejs.org/en/download/)
 
@@ -50,7 +52,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Clone the project
 
-```bash 
+```bash
 git clone git@github.com:thecodechaser/todo-list-front-end.git
 
 cd todo-list-front-end
@@ -59,20 +61,22 @@ cd todo-list-front-end
 - Install dependencies
 
 ```bash
-npm i 
+npm i
 or
 npm install
 ```
+
 - To Start the development server
+
 ```bash
 npm start
 ```
 
 - To test the project
+
 ```bash
 npm run test
 ```
-
 
 ## Visit And Open Files
 
