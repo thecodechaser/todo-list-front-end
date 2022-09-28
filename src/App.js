@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router';
+import Hoome from './pages/Home';
+import TodoList from './pages/TodoList';
 import './App.css';
 
 function App() {
