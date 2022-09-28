@@ -1,6 +1,6 @@
 /* eslint-disable */
 // const
-const BASEURL ="http://localhost:8080/api/"
+const BASEURL ="http://localhost:8080/api/todos"
 const ADD_TODO = "todolist/todos/ADD_TODO";
 const REMOVE_TODO = "todolist/todos/REMOVE_TODO";
 const FETCH_TODO = "todolist/todos/FETCH_TODO";
@@ -25,13 +25,10 @@ const fetchTodo = (payload) => ({
 });
 
 // api functions
-export const fetchBookApi = () => async (dispatch) => {
-  const books = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ihHFtrkDGalHB4Kt6Ws8/books');
-  const mapBooks = Object.entries(books.data).map(([id, book]) => {
-    const { category, title } = book[0];
-    return { id, category, title };
-  });
-  dispatch(fetchTodo(mapBooks));
+export const fetchTodoApi = () => async (dispatch) => {
+  const todos = await Axios.get(`${BASEURL}`);
+  console.log(todos)
+  // dispatch(fetchTodo(mapBooks));
 };
 
 
