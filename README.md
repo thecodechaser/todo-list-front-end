@@ -2,7 +2,7 @@
 
 # Todo-List Frontend
 
-> Todo-List front-end is an application for users to handle their daily tasks. Users can add, delete, and update tasks from the list. This is the front-end user interface built in React and Redux.
+> Todo-List front-end is an application for users to handle their daily tasks. Users can add, delete, and update tasks from the list. This is the front-end user interface built in React and Redux..
 
 ## Link to the backend
 
