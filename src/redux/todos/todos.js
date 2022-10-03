@@ -65,12 +65,12 @@ const todoReducer = (state = initialState, action) => {
       return state.filter((todo) => todo.id !== action.payload);
     case FETCH_TODO:
       return action.payload;
-      case UPDATE_TODO: {
-        const index = state.findIndex((todo) => todo.id === action.id);
-        const newArray = [...state];
-        newArray[index].task = action.editTodo;
-        return newArray;
-      }
+    case UPDATE_TODO: {
+      const index = state.findIndex((todo) => todo.id === action.id);
+      const newArray = [...state];
+      newArray[index].task = action.editTodo;
+      return newArray;
+    }
     default:
       return state;
   }

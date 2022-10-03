@@ -15,7 +15,6 @@ const Todo = (props) => {
   const setUpdateMsg = props.setUpdateMsg;
   // const [editTodo, setEditTodo] = useState(todo.task);
 
-
   const setEditTodo = (value) => {
     editTodo = value;
     edit = true;
