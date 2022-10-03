@@ -1,15 +1,31 @@
-import { useState } from "react";
+import useForceUpdate from "use-force-update";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { AiTwotoneTool } from "react-icons/ai";
 import { removeTodoApi, updateTodoApi } from "../../redux/todos/todos";
 import { useDispatch } from "react-redux";
 
+let editTodo = "";
+let edit = false;
+
 const Todo = (props) => {
   const dispatch = useDispatch();
+  const forceUpdate = useForceUpdate();
   const todo = props.todo;
   const setDeleteMsg = props.setDeleteMsg;
   const setUpdateMsg = props.setUpdateMsg;
-  const [editTodo, setEditTodo] = useState(todo.task);
+  // const [editTodo, setEditTodo] = useState(todo.task);
+
+
+  const setEditTodo = (value) => {
+    editTodo = value;
+    edit = true;
+    forceUpdate();
+  };
+
+  if (!edit) {
+    editTodo = todo.task;
+  }
+
   const removeTodo = () => {
     dispatch(removeTodoApi(todo.id));
     setDeleteMsg(true);
@@ -19,6 +35,7 @@ const Todo = (props) => {
   };
 
   const updateTodo = () => {
+    edit = false;
     dispatch(updateTodoApi(todo.id, editTodo));
     setUpdateMsg(true);
     setTimeout(() => {
