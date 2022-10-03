@@ -1,4 +1,5 @@
 import Axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 // const
 const BASEURL = "http://localhost:8080/api/todos";
@@ -26,16 +27,17 @@ const fetchTodo = (payload) => ({
   payload,
 });
 
-const updateTodo = (payload) => ({
+const updateTodo = (id, editTodo) => ({
   type: UPDATE_TODO,
-  payload,
+  id,
+  editTodo,
 });
 
 // api functions
 
 export const addTodoApi = (todo) => async (dispatch) => {
   await Axios.post(`${BASEURL}`, todo);
-  const localTodo = { task: todo.task, completed: false, id: 100 };
+  const localTodo = { task: todo.task, completed: false, id: uuidv4() };
   dispatch(addTodo(localTodo));
 };
 
@@ -51,6 +53,7 @@ export const removeTodoApi = (id) => async (dispatch) => {
 
 export const updateTodoApi = (id, editTodo) => async (dispatch) => {
   await Axios.put(`${BASEURL}/${id}`, { task: editTodo });
+  dispatch(updateTodo(id, editTodo));
 };
 
 // recucer
@@ -62,6 +65,12 @@ const todoReducer = (state = initialState, action) => {
       return state.filter((todo) => todo.id !== action.payload);
     case FETCH_TODO:
       return action.payload;
+      case UPDATE_TODO: {
+        const index = state.findIndex((todo) => todo.id === action.id);
+        const newArray = [...state];
+        newArray[index].task = action.editTodo;
+        return newArray;
+      }
     default:
       return state;
   }
